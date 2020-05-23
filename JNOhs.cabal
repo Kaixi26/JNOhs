@@ -1,0 +1,36 @@
+name:                JNOhs
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/JNOhs#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Kaixi
+maintainer:          example@example.com
+copyright:           2020 Kaixi
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable JNOhs
+  hs-source-dirs:      src
+                     , src/Command
+                     , src/Command/Quote
+  other-modules:
+                       Config
+                     , Runtime
+                     , Command.Command
+                     , Command.Quote.Quote
+                     , Command.Quote.QuoteAdd
+                     , Command.Quote.QuoteA
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , text
+                     , discord-haskell
+                     , aeson
+                     , vector
+                     , relude
+                     , random
+
